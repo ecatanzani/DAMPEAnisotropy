@@ -1,0 +1,37 @@
+This is the anisotropy methods study by M. Stolpovskiy
+Work started in Dec 2018
+
+tools.py : a set of useful PYTHON tools for anisotropy, like:
+    - Simulation of observations
+    - Reconstruction of the dipole
+    - Setting the dipole upper limit
+    - Tophat smoothing
+    - Sky filtering
+    - Anisotropy significance
+
+I use the Jupyter Notebook a lot. Here are some notebooks created:
+
+significance_formula.ipynb : 
+    discussion about the significance formula for the tophat smoothed maps
+
+dipole_sensitivity.ipynb : 
+    The most general way to get the UL for the dipole amplitude.
+    The experimental UL discussed.
+
+dipole_sensitivity_thr.ipynb : 
+    More optimized way, with noise thresholding. Allows to get lower UL.
+
+rate-based_MC.ipynb :
+    MC comparison of the event-shuffling and rate-based methods.
+    Conclusion: rate-based is good and event-shuffling is bad
+    However, the UL results are still valid, because the
+        badness of the event-shuffling is only evident with
+        high enough dipole amplitude.
+
+In order to run any of these notebooks you'll need an iso_map.npy -- a file
+    which contains a numpy array with the isotropy (exposure) map in galactic coordinates.
+Software requirements: Python 2 with
+    - numpy
+    - matplotlib
+    - scipy
+    - healpy of version 

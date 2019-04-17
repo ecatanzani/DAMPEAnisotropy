@@ -1,0 +1,5 @@
+*.npy
+*.txt
+npix_dict
+*.tcl
+*.pyc
